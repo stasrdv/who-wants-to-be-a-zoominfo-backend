@@ -18,8 +18,7 @@ export class UserStatusController{
     }
 
     public getUserGameStatus(req: Request, res: Response){
-        const query = UserGameStatusModel.find().sort({ score: 1 }).limit(1);
-        UserGameStatusModel.find( {}, null, { sort: { score: +1 }, limit: 10 }, (err, contact) => {
+        UserGameStatusModel.find( {}, null, { sort: { score: -1 }, limit: 10 }, (err, contact) => {
             if(err){
                 res.send(err);
                 res.status(400)
