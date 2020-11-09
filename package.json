@@ -1,0 +1,41 @@
+{
+  "name": "assignment-2",
+  "version": "1.0.0",
+  "description": "assigment-2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^15.1.0",
+    "@types/express-winston": "^3.0.3",
+    "@types/uuid": "^3.4.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-joi-validation": "^2.0.0",
+    "express-winston": "^3.2.1",
+    "joi-extract-type": "^15.0.0",
+    "mongoose": "^5.10.13",
+    "uuid": "^3.3.2",
+    "winston": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/cors": "^2.8.5",
+    "@types/express": "^4.17.0",
+    "@types/hapi__joi": "^15.0.2",
+    "@types/mongoose": "^5.7.37",
+    "@types/node": "^12.6.2",
+    "@types/request": "^2.48.2",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
