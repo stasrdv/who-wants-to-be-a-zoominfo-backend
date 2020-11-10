@@ -36,7 +36,7 @@ class App {
     this.app.use("/api", router);
     this.initCommonHandlers();
     this.iniRoutes();
-    this.app.listen(4000, (err: any) => {
+    this.app.listen(process.env.PORT || 4000, (err: any) => {
       if (err) {
         return console.log(err);
       }
