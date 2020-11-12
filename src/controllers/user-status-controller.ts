@@ -18,12 +18,12 @@ export class UserStatusController{
     }
 
     public getUserGameStatus(req: Request, res: Response){
-        UserGameStatusModel.find( {}, null, { sort: { score: -1 }, limit: 10 }, (err, contact) => {
+        UserGameStatusModel.find( {}, null, { sort: { score: -1 }, limit: 10 }, (err, totRows) => {
             if(err){
                 res.send(err);
                 res.status(400)
             }
-            res.json(contact);
+            res.json(totRows);
         });
     }
 }
