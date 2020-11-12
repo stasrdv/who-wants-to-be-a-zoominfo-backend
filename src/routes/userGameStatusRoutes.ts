@@ -14,9 +14,6 @@ import {UserStatusController} from '../controllers/user-status-controller';
 
 export class UserGameStatusRoutes {
   public userStatusController: UserStatusController = new UserStatusController();
-  public getTopResults(): Promise<UserGameStatus[]> {
-    return new Promise(resolve => setTimeout(() => resolve(), 1000));
-  }
   public routes(router: Router): void {
     // GET
     router.get("/gamestatus",(req: Request, res: Response, next: NextFunction) => {
@@ -38,15 +35,4 @@ export class UserGameStatusRoutes {
   }
 }
 
-export interface UserGameStatus {
-  userName:string;
-  score:number;
-  gameStatus:GameStatus;
-}
-export interface GameStatus {
-  questionStatus:QuestionStatus[];
-}
-export interface QuestionStatus{
-  question : string,
-  isCorrect : boolean;
-}
+

@@ -14,7 +14,7 @@ const router = express.Router();
 
 class App {
   public app = express();
-  public categoryAPI: UserGameStatusRoutes = new UserGameStatusRoutes();
+  public userGameStatusAPI: UserGameStatusRoutes = new UserGameStatusRoutes();
 
   constructor() {
     this.onServerStart()
@@ -28,7 +28,7 @@ class App {
   }
 
   private iniRoutes() {
-    this.categoryAPI.routes(router);
+    this.userGameStatusAPI.routes(router);
   }
 
 
